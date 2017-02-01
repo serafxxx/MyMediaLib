@@ -1,0 +1,18 @@
+.modal,.modal .my-modal-body{background-color:#000}
+.month-header,.year-header{cursor:pointer;text-align:center}
+.modal,.month-header,.year-header{text-align:center}
+.media-list-menu{margin:10px 0}
+.modal .my-modal-dialog{display:inline-block;width:auto;margin:0 auto}
+.modal .my-modal-content{display:inline-block;border-radius:0;background-color:#000}
+.modal .my-modal-content img{padding:10px;max-width:100%;max-height:100%}
+.modal .my-modal-body{padding:0}
+.day-header,.month-header-list{padding-top:20px;margin-bottom:10px;border-bottom:1px dashed #aaa}
+.month-header-list{font-size:22px}
+.day-header{color:#aaa;font-size:12px}
+.media-file-thumb{width:130px;height:130px;display:inline-block}
+.media-file-thumb-month .media-file-thumb{width:40px;height:40px;display:inline-block}
+.media-file-thumb-month .media-file-thumb img{width:40px;height:40px}
+.thumb-outer{display:inline-block;vertical-align:top}
+.media-icon{width:70px;height:70px}
+.year-list{margin:10px 0}
+.year-list .year-link{display:inline-block;padding:0 5px;font-size:18px}

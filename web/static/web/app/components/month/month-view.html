@@ -1,0 +1,4 @@
+<div class="container">
+    <h3 class="month-header" ng-click="location.path('/dates/'+year)">{{ date(year, month-1, 1) | amDateFormat: 'MMMM YYYY' }}</h3>
+    <div class="media-list" media-files="media"></div>
+</div>

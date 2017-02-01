@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Media Lib</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'web/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'web/bower_components/angular-motion/dist/angular-motion.min.css' %}" rel="stylesheet">
+    <link href="{% static 'web/app/styles/gen/main.css' %}" rel="stylesheet">
+    <link href="{% static 'web/app/styles/gen/components.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-app="MML">
+    <div ng-view id="content-container" ></div>
+    <div class="alert-container"></div>
+    <script src={% static 'web/bower_components/jquery/dist/jquery.min.js'%}></script>
+    <script src={% static 'web/bower_components/bootstrap/dist/js/bootstrap.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular/angular.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular-animate/angular-animate.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular-route/angular-route.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular-strap/dist/angular-strap.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular-strap/dist/angular-strap.tpl.min.js' %}></script>
+    <script src={% static 'web/bower_components/moment/min/moment.min.js' %}></script>
+    <script src={% static 'web/bower_components/moment/locale/ru.js' %}></script>
+    <script src={% static 'web/bower_components/angular-moment/angular-moment.min.js' %}></script>
+    <script src={% static 'web/bower_components/angular-sanitize/angular-sanitize.min.js' %}></script>
+
+    <script src={% static 'web/app/app.js' %}></script>
+    <script src={% static 'web/app/services/asyncFactory.js' %}></script>
+    <script src={% static 'web/app/services/mediaFactory.js' %}></script>
+    <script src={% static 'web/app/services/utilFactory.js' %}></script>
+    <script src={% static 'web/app/components/media/media-list-directive.js' %}></script>
+    <script src={% static 'web/app/components/dashboard/dashboard-ctrl.js' %}></script>
+    <script src={% static 'web/app/components/year/year-ctrl.js' %}></script>
+    <script src={% static 'web/app/components/month/month-ctrl.js' %}></script>
+    <script src={% static 'web/app/components/photo-file/photo-file.js' %}></script>
+    <script src={% static 'web/app/components/video-file/video-file-directive.js' %}></script>
+    <script src={% static 'web/app/components/raw-photo/raw-photo-directive.js' %}></script>
+  </body>
+</html>

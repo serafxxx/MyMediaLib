@@ -1,0 +1,45 @@
+
+<div ng-hide="disableMenu" class="media-list-menu">
+    <button type="button" class="btn btn-default" ng-model="selectGroupBy" data-html="1" data-animation="am-flip-x" bs-options="icon.value as icon.label for icon in selectGroupByIcons" ng-change="onSelectGroupping()" bs-select>
+        Action <span class="caret"></span>
+    </button>
+</div>
+
+<div ng-if="selectGroupBy == 'no'" ng-repeat="media_file in mediaFiles" class="thumb-outer">
+    <div class="media-file-thumb photo-file-thumb" ng-if="media_file.cls=='PhotoFile'" media-file-index="$index" media-files="mediaFiles"></div>
+    <div class="media-file-thumb video-file-thumb" ng-if="media_file.cls=='VideoFile'" media-file-index="$index" media-files="mediaFiles"></div>
+    <div class="media-file-thumb raw-photo-thumb"  ng-if="media_file.cls=='RawPhoto'"  media-file-index="$index" media-files="mediaFiles"></div>
+</div>
+
+<div ng-if="selectGroupBy == 'by_date'" ng-repeat="(year, months) in media_by_date">
+    <div ng-repeat="(month, days) in months">
+        <div ng-repeat="(day, day_files) in days">
+            <div class="day-header">{{ date(year, month-1, day) | amDateFormat: 'DD MMMM, dd'}}</div>
+            <div ng-repeat="media_file in day_files" class="thumb-outer">
+                <div ng-if="media_file.cls=='PhotoFile'"
+                        class="media-file-thumb photo-file-thumb"  media-file-index="mediaFiles.indexOf(media_file)" media-files="mediaFiles"></div>
+
+                <div ng-if="media_file.cls=='VideoFile'"
+                        class="media-file-thumb video-file-thumb" obj="media_file"></div>
+
+                <div ng-if="media_file.cls=='RawPhoto'"
+                        class="media-file-thumb raw-photo-thumb" obj="media_file"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-if="selectGroupBy == 'by_media_type'" ng-repeat="(media_cls, media_cls_files) in media_by_type">
+    <div class="day-header">{{ media_cls }}</div>
+    <div ng-repeat="media_file in media_cls_files" class="thumb-outer">
+        <div ng-if="media_file.cls=='PhotoFile'"
+                class="media-file-thumb photo-file-thumb" media-file-index="$index" media-files="media_cls_files"></div>
+
+        <div ng-if="media_file.cls=='VideoFile'"
+                class="media-file-thumb video-file-thumb" obj="media_file"></div>
+
+        <div ng-if="media_file.cls=='RawPhoto'"
+                class="media-file-thumb raw-photo-thumb" obj="media_file"></div>
+    </div>
+</div>
+

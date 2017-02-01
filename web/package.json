@@ -1,0 +1,12 @@
+{
+  "name": "MyMediaLib",
+  "version": "0.0.1",
+  "description": "Angularjs app to use with MML",
+  "dependencies": {},
+  "devDependencies": {
+    "assemble-less": "^0.7.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

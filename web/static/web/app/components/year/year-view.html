@@ -1,0 +1,13 @@
+<div class="container">
+
+    <h3 class="year-header" ng-click="location.path('/dates')">{{date(year, 0, 1)| amDateFormat: 'YYYY'}}</h3>
+
+    <div ng-repeat="(month, month_files) in months" >
+        <div class="month-header-list">
+            <a href="#/dates/{{ year }}/{{ month }}">{{ date(year, month-1, 1) | amDateFormat: 'MMMM' }}</a>
+        </div>
+        <div class="media-list media-file-thumb-month" media-files="month_files" disable-menu="true"></div>
+    </div>
+
+
+</div>

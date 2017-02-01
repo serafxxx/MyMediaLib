@@ -1,0 +1,15 @@
+amqp==1.4.9
+anyjson==0.3.3
+billiard==3.3.0.23
+celery==3.1.24
+Django==1.10
+djangorestframework==3.4.7
+ExifRead==2.1.2
+kombu==3.0.37
+Pillow==3.3.1
+pkg-resources==0.0.0
+python-pushover==0.2
+pytz==2016.6.1
+pyudev==0.21.0
+requests==2.11.1
+six==1.10.0
